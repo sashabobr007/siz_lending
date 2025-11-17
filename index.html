@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>СИЗАРК360 — первый в России маркетплейс СИЗ со встроенным учётом</title>
+  <meta name="description" content="СИЗАРК360 — первый в России отраслевой маркетплейс СИЗ со встроенным учётом. Все производители, весь каталог и весь учёт СИЗ — в одном окне. Платформа объединяет требования, подбор, закупку и учёт СИЗ.">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="СИЗАРК360 — маркетплейс СИЗ и учёт в одной системе">
+  <meta property="og:description" content="Все производители и весь учёт СИЗ — в одном окне. СИЗАРК360 объединяет требования, подбор, закупки и учёт СИЗ.">
+  <meta property="og:url" content="https://promo.сизарк360.рф/">
+  <meta property="og:site_name" content="СИЗАРК360">
+  <meta property="og:image" content="https://promo.xn--360-5cdab7b5a3a.xn--p1ai/assets/hero-preview.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0D3B66;
+      --orange: #F4A300;
+
+      --bg-page: #050910;
+      --bg-section: #050910;
+      --bg-section-alt: #0B1520;
+      --bg-light: #F5F5F5;
+
+      --card-dark: #111827;
+      --card-border-dark: #1F2933;
+
+      --text-main: #E5EAF2;
+      --text-muted: #9CA3AF;
+
+      --radius-lg: 16px;
+      --shadow-soft: 0 16px 40px rgba(0,0,0,0.55);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      background-color: var(--blue);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      line-height: 1.5;
+      background-color: var(--bg-page);
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .page { min-height: 100vh; background-color: var(--bg-page); }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--blue);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .logo-word {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .logo-word-main { color: #FFFFFF; }
+    .logo-word-accent { color: var(--orange); }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: var(--orange);
+      transition: width 0.2s ease-out;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .header-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.2s ease-out,
+                  transform 0.15s ease-out,
+                  border-color 0.2s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--orange);
+      color: #0B0B0B;
+      border-color: var(--orange);
+      box-shadow: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background-color: #e39600;
+      border-color: #e39600;
+      box-shadow: none;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #FFFFFF;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--orange);
+      background-color: rgba(0,0,0,0.12);
+      transform: translateY(-1px);
+    }
+
+    /* SECTION BASE */
+
+    section { padding: 80px 0; }
+
+    .section-dark { background-color: var(--bg-section); }
+    .section-alt { background-color: var(--bg-section-alt); }
+    .section-light { background-color: var(--bg-light); color: #111827; }
+
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      text-align: left;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .section-light .section-title { color: #111827; }
+    .section-light .section-subtitle { color: #4B5563; }
+
+    .section-centered { text-align: center; }
+
+    /* HERO С ФОНОВЫМ ВИДЕО */
+
+    .hero {
+      position: relative;
+      background-color: #020814;
+      overflow: hidden;
+      padding: 96px 0 104px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .hero-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(11, 21, 32, 0.88);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 40px);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .hero-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background-color: #0A1725;
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(99,115,139,0.7);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background-color: var(--orange);
+    }
+
+    /* CARDS */
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background-color: var(--card-dark);
+      box-shadow: var(--shadow-soft);
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 1px solid var(--card-border-dark);
+      transition: transform 0.2s ease-out,
+                  box-shadow 0.2s ease-out,
+                  border-color 0.2s ease-out,
+                  background-color 0.2s.ease-out;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+      border-color: rgba(244,163,0,0.8);
+      background-color: #151F2B;
+    }
+
+    .section-light .card {
+      background-color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+      border-color: rgba(15,23,42,0.06);
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+      background-color: #050910;
+    }
+
+    .card-icon-inner {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 1.5px solid var(--blue);
+      position: relative;
+      background-color: #020814;
+    }
+
+    .card-icon-inner::after {
+      content: "";
+      position: absolute;
+      right: -3px;
+      bottom: -3px;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background-color: var(--orange);
+    }
+
+    .section-light .card-icon-inner { background-color: #FFFFFF; }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .section-light .card-title { color: #111827; }
+    .section-light .card-text { color: #4B5563; }
+
+    /* BENEFITS */
+
+    .benefits {
+      background-color: var(--blue);
+      color: #FFFFFF;
+    }
+
+    .benefits .section-title { color: #FFFFFF; }
+    .benefits .section-subtitle { color: rgba(255,255,255,0.9); }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .benefit-item {
+      padding: 18px 18px 20px;
+      border-radius: var(--radius-lg);
+      background-color: rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: transform 0.2s ease-out,
+                  box-shadow 0.2s ease-out,
+                  border-color 0.2s.ease-out,
+                  background-color 0.2s.ease-out;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+      border-color: rgba(244,163,0,0.8);
+      background-color: rgba(0,0,0,0.35);
+    }
+
+    .benefit-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .benefit-text {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* HOW IT WORKS */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .step-card {
+      border-radius: var(--radius-lg);
+      background-color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.12);
+      padding: 18px 18px 20px;
+      border: 1px solid rgba(15,23,42,0.08);
+      transition: transform 0.2s.ease-out,
+                  box-shadow 0.2s.ease-out,
+                  border-color 0.2s.ease-out;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15,23,42,0.22);
+      border-color: rgba(244,163,0,0.8);
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 10px;
+      background-color: #F9FAFB;
+    }
+
+    /* SCREENS (ГОРИЗОНТАЛЬНАЯ ЛЕНТА) */
+
+    .screens-carousel {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .screens-track {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      will-change: transform;
+      animation: screens-scroll 30s linear infinite;
+    }
+
+    .screens-carousel:hover .screens-track {
+      animation-play-state: paused;
+    }
+
+    .screen-item {
+      min-width: min(360px, 80vw);
+      flex-shrink: 0;
+    }
+
+    .screen-frame {
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.5);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background-color: #020814;
+      height: 260px;
+      position: relative;
+    }
+
+    .screen-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .screen-caption {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    @keyframes screens-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* CTA */
+
+    .cta-final {
+      background-color: var(--blue);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 72px 0;
+    }
+
+    .cta-final .section-title {
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .cta-final .section-subtitle {
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 24px;
+    }
+
+    .cta-form {
+      max-width: 560px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .cta-form textarea {
+      grid-column: 1 / -1;
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.45);
+      background-color: rgba(0,0,0,0.15);
+      color: #FFFFFF;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .input::placeholder { color: rgba(255,255,255,0.6); }
+
+    .cta-final .btn-primary {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+    }
+
+    /* MARQUEE */
+
+    .marquee-wrapper {
+      border-top: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+      overflow: hidden;
+      background-color: var(--bg-section-alt);
+    }
+
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 30s linear infinite;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 12px 0;
+      color: #FFFFFF;
+    }
+
+    .marquee span { margin-right: 72px; }
+
+    .logo-text-blue { color: #FFFFFF; }
+    .logo-text-orange { color: var(--orange); }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* FOOTER */
+
+    footer {
+      background-color: var(--bg-section-alt);
+      color: #FFFFFF;
+      padding: 40px 0 24px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    .footer-main-text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .footer-muted { opacity: 0.9; }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.88);
+      border-top: 1px solid rgba(255,255,255,0.35);
+      padding-top: 12px;
+    }
+
+    .footer-policy-btn {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.65);
+      background-color: transparent;
+      color: #FFFFFF;
+      padding: 6px 14px;
+      font-size: 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s ease-out,
+                  border-color 0.2s ease-out,
+                  transform 0.15s ease-out;
+    }
+
+    .footer-policy-btn:hover {
+      background-color: rgba(0,0,0,0.25);
+      border-color: var(--orange);
+      transform: translateY(-1px);
+    }
+
+    .footer-policy-btn-icon {
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .policy-panel {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background-color: rgba(0,0,0,0.22);
+      font-size: 13px;
+      line-height: 1.6;
+      max-height: 320px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .policy-panel h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 10px 0 6px;
+    }
+
+    .policy-panel p {
+      margin-bottom: 6px;
+      color: rgba(229,234,242,0.95);
+    }
+
+    .policy-panel strong {
+      font-weight: 600;
+    }
+
+    /* REVEAL ANIMATION BASE */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 960px) {
+      .hero { padding: 80px 0 88px; }
+
+      .cards-grid-3,
+      .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      nav { display: none; }
+
+      .header-inner { padding: 10px 0; }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 56px 0; }
+
+      .cards-grid-3,
+      .benefits-grid,
+      .steps-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .cta-form {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .marquee { font-size: 32px; }
+
+      .screen-item {
+        min-width: 80vw;
+      }
+
+      .screen-frame {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-word logo-word-main">СИЗАРК</span><span class="logo-word logo-word-accent">360</span>
+      </div>
+      <nav>
+        <a href="#about">Что такое СИЗАРК360</a>
+        <a href="#for-whom">Кому подходит</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#how">Как это работает</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-cta">
+        <a href="#cta" class="btn btn-outline">Запросить демо</a>
+        <a href="https://app.сизарк360.рф/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          Войти в платформу
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO с фоновым видео -->
+    <section class="hero">
+      <div class="hero-bg">
+        <video src="assets/grok-video-c1ee5a99-6699-4892-a857-8015a4cbe16a-3.mp4"
+               poster="assets/hero-poster.jpg"
+               autoplay muted loop playsinline></video>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-inner reveal">
+          <div class="badge">
+            <div class="badge-dot"></div>
+            Единая цифровая среда для охраны труда и СИЗ
+          </div>
+          <h1 class="hero-title">
+            Первый в России маркетплейс СИЗ со встроенным учётом. Все производители и весь ваш учёт — в одном окне.
+          </h1>
+          <p class="hero-subtitle">
+            Раньше требования формировали в одной системе, товар искали — в другой, учёт вели — в Excel.
+            СИЗАРК360 соединяет требования, подбор, закупку и учёт СИЗ в одной платформе — без разрывов и ошибок.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#cta" class="btn btn-primary">Запросить демо</a>
+            <a href="https://app.сизарк360.рф/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              Посмотреть платформу
+            </a>
+          </div>
+          <div class="hero-meta">
+            Для служб охраны труда, снабжения и руководителей предприятий от 50 до 5000 сотрудников.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- "ЧТО ТАКОЕ СИЗАРК360" -->
+    <section class="section-alt" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Что такое СИЗАРК360</h2>
+          <p class="section-subtitle">
+            Охрана труда рушится, когда требования, закупки и учёт — в разных местах.
+            Если подбор, закупка и учёт разорваны — компания живёт в постоянном хаосе и рисках.
+          </p>
+        </div>
+        <div class="cards-grid-3">
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Несоответствие СИЗ требованиям</h3>
+            <p class="card-text">
+              Одно прописано в регламентах, другое закупается, третье выдаётся. Требования и фактический товар не совпадают.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Excel не выдерживает систему</h3>
+            <p class="card-text">
+              Сроки замены теряются, история выдачи не сходится, отчёты собираются вручную и с ошибками.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Закупки «вслепую»</h3>
+            <p class="card-text">
+              Непонятно, сколько и чего реально нужно. Лишние позиции закупаются «на всякий случай», а нужные товары не успевают.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК: ПОСЛЕДСТВИЯ -->
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Цена хаоса в СИЗ выше, чем кажется</h2>
+          <p class="section-subtitle">
+            Разрыв между требованиями, закупками и учётом каждый день превращается в прямые потери.
+          </p>
+        </div>
+        <div class="cards-grid-3">
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Штрафы и предписания</h3>
+            <p class="card-text">
+              Проверка выявляет несоответствия, которые не видно в таблицах. Компания платит за отсутствие системы.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Риск травматизма</h3>
+            <p class="card-text">
+              Неподходящий СИЗ — это не просто «ошибка в учёте», а реальные инциденты и ответственность руководства.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Лишние закупки и остатки</h3>
+            <p class="card-text">
+              Из-за плохой видимости закупаются лишние объёмы, деньги «висят» на складе, а нужного товара не хватает.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК: РЕШЕНИЕ -->
+    <section id="solution" class="section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">СИЗАРК360 объединяет подбор, закупку и учёт СИЗ в одной системе</h2>
+          <p class="section-subtitle">
+            Вы задаёте требования к защитным свойствам и роли сотрудников — платформа сама подбирает подходящие товары из каталога и ведёт весь учёт.
+          </p>
+        </div>
+        <div class="cards-grid-3">
+          <!-- 1. Чёткий учёт -->
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Чёткий учёт</h3>
+            <p class="card-text">
+              Заводите сотрудников, частоту выдачи и перечень СИЗ с защитными свойствами и ГОСТ — система сама следит за сроками и соответствием.
+            </p>
+          </article>
+          <!-- 2. Интеллектуальный подбор СИЗ -->
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Интеллектуальный подбор СИЗ</h3>
+            <p class="card-text">
+              Система знает свойства каждой позиции каталога и автоматически предлагает товары, которые подходят под требования конкретной роли.
+            </p>
+          </article>
+          <!-- 3. Прозрачный учёт и склад -->
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Прозрачный учёт и склад</h3>
+            <p class="card-text">
+              Выдача, возврат, сроки эксплуатации, остатки и заявки — в одном интерфейсе. Никаких дублирующихся таблиц и потерь в Excel.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК: ПОЧЕМУ МЫ -->
+    <section id="benefits" class="benefits">
+      <div class="container">
+        <div class="section-header section-centered reveal">
+          <h2 class="section-title">Единственная платформа, которая закрывает весь цикл работы с СИЗ</h2>
+          <p class="section-subtitle">
+            СИЗАРК360 соединяет требования, каталог, производителей и учёт — так, чтобы система работала сама.
+          </p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Все производители и бренды в одном каталоге</div>
+            <div class="benefit-text">Вы больше не ищете по десяткам сайтов. Каталог стандартизирован и развивается вместе с рынком.</div>
+          </div>
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Автоматический подбор по требованиям</div>
+            <div class="benefit-text">Вы задаёте роль и требования — система предлагает СИЗ с нужными защитными свойствами.</div>
+          </div>
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Учёт внутри той же системы</div>
+            <div class="benefit-text">Нет разрывов между «что надо», «что купили» и «что выдали» — всё в одном интерфейсе.</div>
+          </div>
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Синхронизация данных по всей цепочке</div>
+            <div class="benefit-text">Требования, каталог, закупки и выдача связаны. Любое изменение видно всем заинтересованным.</div>
+          </div>
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Маркетплейс + учёт + аутсорсинг</div>
+            <div class="benefit-text">Подбор и учёт СИЗ дополняются экспертной поддержкой по охране труда по модели аутсорсинга.</div>
+          </div>
+          <div class="benefit-item reveal">
+            <div class="benefit-title">Результат в цифрах</div>
+            <div class="benefit-text">Меньше штрафов, меньше лишних закупок, меньше ручной работы — больше управляемости.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК: ДЛЯ КОГО -->
+    <section id="for-whom" class="section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Для тех, кто отвечает за безопасность, снабжение и риски</h2>
+          <p class="section-subtitle">
+            СИЗАРК360 делает охрану труда управляемой для всех участников процесса.
+          </p>
+        </div>
+        <div class="cards-grid-3">
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Специалисты и руководители по ОТ</h3>
+            <p class="card-text">
+              Меньше Excel и ручных сверок, больше контроля и готовности к проверкам. Система напомнит о сроках и покажет картину по СИЗ.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Снабжение и склад</h3>
+            <p class="card-text">
+              Понимание реальной потребности, сокращение остатков, закупки только того, что соответствует требованиям.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon"><div class="card-icon-inner"></div></div>
+            <h3 class="card-title">Руководители предприятий</h3>
+            <p class="card-text">
+              Прозрачные риски, понятный бюджет на СИЗ и уверенность, что сотрудники защищены в соответствии с регламентами.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section id="how" class="section-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Внедрение без сложных проектов и долгой интеграции</h2>
+          <p class="section-subtitle">
+            Мы оставляем сложность внутри платформы, а вам — понятные шаги.
+          </p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <div class="card-title" style="color:#111827;">Диагностика</div>
+            <p class="card-text" style="color:#4B5563;">Анализ текущей системы охраны труда, учёта СИЗ и регламентов.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">2</div>
+            <div class="card-title" style="color:#111827;">Настройка платформы</div>
+            <p class="card-text" style="color:#4B5563;">Перенос данных, настройка ролей, регламентов и справочников.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">3</div>
+            <div class="card-title" style="color:#111827;">Обучение и запуск</div>
+            <p class="card-text" style="color:#4B5563;">Обучение пользователей и запуск пилота или полного использования.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">4</div>
+            <div class="card-title" style="color:#111827;">Сопровождение</div>
+            <p class="card-text" style="color:#4B5563;">Поддержка, адаптация под изменения требований и развитие отчётности.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СКРИНЫ ПЛАТФОРМЫ: ГОРИЗОНТАЛЬНАЯ ЛЕНТА -->
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Интерфейс, в котором видно главное</h2>
+          <p class="section-subtitle">
+            Дашборды, карточки сотрудников и заявки — всё, что нужно для контроля охраны труда и СИЗ.
+          </p>
+        </div>
+
+        <div class="screens-carousel reveal">
+          <div class="screens-track">
+            <!-- ПЕРВАЯ ТРОЙКА -->
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/1.webp" alt="Заведение сотрудников в платформе СИЗАРК360">
+              </div>
+              <div class="screen-caption">Заведение сотрудников и ролей</div>
+            </div>
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/2.webp" alt="Подбор спецодежды для сотрудников в СИЗАРК360">
+              </div>
+              <div class="screen-caption">Подбор спецодежды по требованиям</div>
+            </div>
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/3.webp" alt="Карточка сотрудника и статус обеспеченности СИЗ">
+              </div>
+              <div class="screen-caption">Карточка сотрудника и статус обеспеченности</div>
+            </div>
+
+            <!-- ДУБЛИ ДЛЯ ПЛАВНОГО ЗАЦИКЛИВАНИЯ -->
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/1.webp" alt="Заведение сотрудников в платформе СИЗАРК360">
+              </div>
+              <div class="screen-caption">Заведение сотрудников и ролей</div>
+            </div>
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/2.webp" alt="Подбор спецодежды для сотрудников в СИЗАРК360">
+              </div>
+              <div class="screen-caption">Подбор спецодежды по требованиям</div>
+            </div>
+            <div class="screen-item">
+              <div class="screen-frame">
+                <img src="assets/3.webp" alt="Карточка сотрудника и статус обеспеченности СИЗ">
+              </div>
+              <div class="screen-caption">Карточка сотрудника и статус обеспеченности</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA ФИНАЛ -->
+    <section id="cta" class="cta-final">
+      <div class="container">
+        <div class="section-header section-centered reveal" style="margin-bottom:24px;">
+          <h2 class="section-title">Посмотрите, как СИЗАРК360 работает с задачами вашей компании</h2>
+          <p class="section-subtitle">
+            Оставьте контакты, и мы проведём персональную демо-сессию с разбором ваших процессов.
+          </p>
+        </div>
+        <form class="cta-form reveal" action="https://formsubmit.co/zelenihina@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Новая заявка с лендинга СИЗАРК360">
+
+          <input class="input" type="text" name="name" placeholder="Имя" required />
+          <input class="input" type="text" name="company" placeholder="Компания" />
+          <input class="input" type="email" name="email" placeholder="Email" required />
+          <input class="input" type="tel" name="phone" placeholder="Телефон" required />
+          <textarea class="input" name="comment" placeholder="Комментарий или удобное время для связи"></textarea>
+          <button type="submit" class="btn btn-primary">Запросить демо СИЗАРК360</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <span><span class="logo-text-blue">СИЗАРК</span><span class="logo-text-orange">360</span></span>
+        <span><span class="logo-text-blue">СИЗАРК</span><span class="logo-text-orange">360</span></span>
+        <span><span class="logo-text-blue">СИЗАРК</span><span class="logo-text-orange">360</span></span>
+        <span><span class="logo-text-blue">СИЗАРК</span><span class="logo-text-orange">360</span></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-title">Обратная связь</div>
+          <div class="footer-main-text">+7 (495) 128-01-36</div>
+          <div class="footer-main-text">info@novatorgk.ru</div>
+          <div class="footer-muted" style="margin-top:6px;">
+            Свяжитесь с нами удобным способом — подберём формат работы под ваши задачи.
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Офис</div>
+          <div>127549, г. Москва, ул. Бибиревская, д. 10, корп. 1</div>
+          <div>Пн–Пт: с 8:00 до 18:00</div>
+        </div>
+        <div>
+          <div class="footer-title">Компания</div>
+          <div>ООО «НОВАТОР»</div>
+          <div>ИНН 3720006820</div>
+          <div>ОГРН 1153720000059</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2020–2025, СИЗАРК360. Все права защищены.</div>
+        <button type="button" class="footer-policy-btn" onclick="togglePolicy()">
+          <span class="footer-policy-btn-icon">▼</span>
+          Политика конфиденциальности
+        </button>
+      </div>
+
+      <!-- ПАНЕЛЬ ПОЛИТИКИ -->
+      <div id="policy-panel" class="policy-panel" aria-hidden="true">
+        <h3>Политика конфиденциальности</h3>
+        <p>
+          Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности)
+          действует в отношении всей информации, которую сайт sizmag.ru (далее – Сайт), расположенный на
+          доменном имени сизарк360.рф (а также его субдоменах), может получить о Пользователе во время
+          использования сайта сизарк360.рф (а также его субдоменов), его программ и его продуктов.
+        </p>
+
+        <h3>1. Определение терминов</h3>
+        <p>1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
+        <p>
+          1.1.1. <strong>«Администрация сайта»</strong> (далее – Администрация) – уполномоченные сотрудники на управление сайтом,
+          которые организуют и (или) осуществляют обработку персональных данных, а также определяют цели обработки персональных
+          данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.
+        </p>
+        <p>
+          1.1.2. <strong>«Персональные данные»</strong> – любая информация, относящаяся к прямо или косвенно определенному
+          или определяемому физическому лицу (субъекту персональных данных).
+        </p>
+        <p>
+          1.1.3. <strong>«Обработка персональных данных»</strong> – любое действие (операция) или совокупность действий (операций),
+          совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая
+          сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование,
+          передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+        </p>
+
+        <h3>2. Общие положения</h3>
+        <p>
+          2.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации по неразглашению и обеспечению
+          режима защиты персональных данных, которые Пользователь предоставляет по запросу Администрации при регистрации на Сайте
+          либо при оформлении заявки.
+        </p>
+        <p>
+          2.2. Использование Сайта Пользователем означает согласие с настоящей Политикой конфиденциальности и условиями обработки
+          персональных данных Пользователя.
+        </p>
+        <p>
+          2.3. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование Сайта.
+        </p>
+
+        <h3>3. Предмет политики конфиденциальности</h3>
+        <p>
+          3.1. Настоящая Политика конфиденциальности устанавливает обязанности Администрации по неразглашению и обеспечению
+          режима защиты персональных данных, которые Пользователь предоставляет по запросу Администрации при регистрации на Сайте,
+          оформлении подписки на рассылку, заполнении форм обратной связи и иных действиях, связанных с использованием Сайта sizmag.ru
+          на доменном имени сизарк360.рф (и его субдоменах).
+        </p>
+        <p>
+          3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики, предоставляются Пользователем путём
+          заполнения специальных форм на Сайте и могут включать в себя: фамилию, имя, отчество, адрес электронной почты (e-mail),
+          номер телефона, данные о компании, занимаемой должности и иную информацию, необходимую для обработки запросов Пользователя.
+        </p>
+
+        <h3>Подписка на рассылку</h3>
+        <p>
+          Надеемся установить хорошие и долгосрочные деловые отношения с вашей компанией и с нетерпением ждём получения от вас запросов.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- GSAP для анимаций -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Пакетная анимация появления элементов .reveal
+  ScrollTrigger.batch(".reveal", {
+    onEnter: batch => {
+      gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: "power2.out"
+      });
+    },
+    start: "top 80%"
+  });
+
+  // Дополнительная анимация hero при первой загрузке
+  gsap.to(".hero .reveal", {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    ease: "power2.out",
+    delay: 0.1
+  });
+
+  // Тоггл политики конфиденциальности
+  function togglePolicy() {
+    const panel = document.getElementById("policy-panel");
+    if (!panel) return;
+    const isHidden = window.getComputedStyle(panel).display === "none";
+    panel.style.display = isHidden ? "block" : "none";
+
+    const icon = document.querySelector(".footer-policy-btn-icon");
+    if (icon) {
+      icon.textContent = isHidden ? "▲" : "▼";
+    }
+  }
+</script>
+</body>
+</html>

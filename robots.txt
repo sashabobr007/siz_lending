@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+Host: https://promo.сизарк360.рф
+Sitemap: https://promo.сизарк360.рф/sitemap.xml
